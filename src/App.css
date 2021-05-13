@@ -1,8 +1,9 @@
-body{
-background: #e2e2e2;
+body {
+  /* background: #b40e0e; */
+  min-width: 300px;
 }
 
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -39,4 +40,4 @@ background: #e2e2e2;
   to {
     transform: rotate(360deg);
   }
-}
+} */

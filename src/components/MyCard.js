@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./MyCard.css"
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
@@ -22,7 +22,7 @@ const MyCard = ({ match }) => {
   const [open, setOpen] = useState(false);
 
   const getMatchCard = () => (
-    <div>
+    <div className="Card">
       <Card
         style={{
           background: match.matchStarted ? "#e2e2e2" : "",
@@ -78,12 +78,12 @@ const MyCard = ({ match }) => {
   const showDetailBtnClicked = (id) => {
     getMatchDetail(id)
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDatail(data);
         handleClickOpen();
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 

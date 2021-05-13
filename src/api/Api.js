@@ -1,4 +1,7 @@
-const API_KEY=" "
+// require("dotenv").config();
+// console.log(process.env.REACT_APP_SECRET_KEY);
+const API_KEY = process.env.REACT_APP_SECRET_KEY;
+
 
 export const getMatches=()=>{
     const url=`https://cricapi.com/api/matches?apikey=${API_KEY}`;
@@ -7,7 +10,7 @@ export const getMatches=()=>{
       return response.json();
     })
     .catch((error) => {
-      console.log("ERROR ", error);
+      // console.log("ERROR ", error);
     });
 };
 

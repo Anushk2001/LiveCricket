@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from '@material-ui/core';
 import Navbar from './components/navbar';
+import Header from './components/Header/Header';
 import MyCard from './components/MyCard';
 import { getMatches } from "./api/Api"
 import React, { useEffect, useState } from "react";
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     getMatches()
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setMatches(data.matches);
       })
       .catch((error) => {});
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      {/* <Header/> */}
+      <Navbar/>
       {/* <MyCard /> */}
       <Container>
         <Grid container>
